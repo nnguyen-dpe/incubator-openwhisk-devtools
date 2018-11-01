@@ -5,7 +5,8 @@ Follow these steps to get your environment ready:
 2. Quick Start
 3. Install Kafka feed providers
 4. Install wsk-cli
-5. Install IBM cloud shell (optional)
+5. Check environment
+6. Install IBM cloud shell (optional)
 
 ### Prerequisites
 
@@ -46,6 +47,8 @@ make create-provider-kafka
 
 Follow instruction at https://openwhisk.apache.org/documentation.html#wsk-cli
 > Note: make sure you always run the command with -i
+
+### Check environment
 
 Check if everything is set up properly
 ```sh
