@@ -412,7 +412,7 @@ $(addprefix install-package-,$(PACKAGES)):
 	$(eval PACKAGE_NAME:= $(shell echo $(@) | cut -b 17-))
 	$(eval PACKAGE_HOME := $(PACKAGE_$(shell echo $(PACKAGE_NAME) |  tr 'a-z' 'A-Z')_HOME))
 	cd $(PACKAGE_HOME) && \
-	$(shell cat ~/tmp/openwhisk/providers.env) ./installCatalog.sh $(realpath $(OPENWHISK_PROJECT_HOME))/ansible/files/auth.whisk.system $(DOCKER_HOST_IP) "http://$(DOCKER_HOST_IP):5984" $(OPEN_WHISK_DB_PREFIX) $(DOCKER_HOST_IP)
+	$(shell cat ~/tmp/openwhisk/providers.env) ./installKafka.sh $(realpath $(OPENWHISK_PROJECT_HOME))/ansible/files/auth.whisk.system $(DOCKER_HOST_IP) "http://$(DOCKER_HOST_IP):5984" $(OPEN_WHISK_DB_PREFIX) $(DOCKER_HOST_IP)
 
 .PHONY: $(addprefix start-provider-,$(PACKAGES))
 $(addprefix start-provider-,$(PACKAGES)):
